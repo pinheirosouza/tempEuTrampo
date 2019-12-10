@@ -1,0 +1,28 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-menu-toggle> 
+          <ion-item id="main" (click)=goToHome()> <ion-icon name="home"> </ion-icon><h3 class="title">Início</h3><ion-icon id="arrow" name="arrow-dropright"></ion-icon></ion-item>
+          <ion-item id="main" (click)=goToDadosUsuario()> <ion-icon name="contact"> </ion-icon><h3 class="title">Dados Pessoais</h3><ion-icon id="arrow" name="arrow-dropright"></ion-icon></ion-item>        
+          <ion-item id="main" (click)=goToMyServices()><ion-icon name="briefcase"></ion-icon><h3 class="title">Meus Serviços</h3><ion-icon id="arrow" name="arrow-dropright"></ion-icon></ion-item>
+          <ion-item id="main" (click)=goToFinanceiro()><ion-icon name="card"></ion-icon><h3 class="title">Financeiro</h3><ion-icon id="arrow" name="arrow-dropright"></ion-icon></ion-item>
+          <ion-item id="main" (click)=emDes()><ion-icon name="timer"></ion-icon><h3 class="title"> Histórico</h3><ion-icon id="arrow" name="arrow-dropright"></ion-icon> </ion-item>
+          <ion-item id="main" (click)=goToAgenda()><ion-icon name="calendar"></ion-icon><h3 class="title">Agenda</h3> <ion-icon id="arrow" name="arrow-dropright"></ion-icon></ion-item>
+          <ion-item id="main" (click)=emDes()><ion-icon name="star-half"></ion-icon><h3 class="title"> Avaliar Serviços</h3> <ion-icon id="arrow" name="arrow-dropright"></ion-icon></ion-item>
+          <ion-item id="main" (click)=goToConversas()> <ion-icon name="chatbubbles"></ion-icon><h3 class="title">Conversas</h3><ion-icon id="arrow" name="arrow-dropright"></ion-icon> </ion-item>
+          <ion-item id="main" (click)=emDes()> <ion-icon name="settings"></ion-icon><h3 class="title">Preferências</h3><ion-icon id="arrow" name="arrow-dropright"></ion-icon> </ion-item>
+          <ion-item id="main" (click)=goToSobre()> <ion-icon name="information-circle-outline"></ion-icon><h3 class="title"> Sobre </h3><ion-icon id="arrow" name="arrow-dropright"></ion-icon></ion-item>
+          <ion-item id="main" (click)=goToAjuda()><ion-icon name="help-circle-outline"></ion-icon><h3 class="title"> Ajuda </h3><ion-icon id="arrow" name="arrow-dropright"></ion-icon></ion-item>
+          <ion-item id="main" (click)=logout()><ion-icon name="power"></ion-icon><h3 class="title"> Desconectar </h3><ion-icon id="arrow" name="arrow-dropright"></ion-icon></ion-item>
+        </ion-menu-toggle> 
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
